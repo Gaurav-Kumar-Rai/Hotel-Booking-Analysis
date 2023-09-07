@@ -1,7 +1,6 @@
-**Hotel-Booking-Analysis**
-
+## Hotel-Booking-Analysis
 The project contains the real world data record of hotel bookings of a city and a resort hotel containing details like bookings, cancellations, guest details etc. from year 2015, 2016 and 2017. In this project we are going to analyze Hotel Booking Data in order to find out valuable insights and give suggestions to increase revenue of hotels.
-
+```
 Programming Language : Python
 
 Libraries used : Pandas, Numpy, Matplotlib, Seaborn
@@ -9,17 +8,17 @@ Libraries used : Pandas, Numpy, Matplotlib, Seaborn
 NoteBook : Google Colab
 
 Dataset Source : Provided by Almabetter themself.
+```
 
-**Objective**
-
+## Objective
 We are provided with a hotel bookings dataset.
 
 The main purpose of this study is to perform EDA on the given dataset and draw useful conclusions about the trends in hotel bookings and how factors that control hotel bookings influence each other.
 
-**Dataset**
 
+## Dataset
 We are given a hotel bookings dataset. This dataset contains booking information for a city hotel and a resort hotel. It contains the following features.
-
+```
 - hotel: Name of hotel ( City or Resort)
 - is_canceled: Whether the booking is canceled or not (0 for no canceled and 1 for canceled)
 - lead_time: time (in days) between booking transaction and actual arrival.
@@ -52,25 +51,42 @@ We are given a hotel bookings dataset. This dataset contains booking information
 - total_of_special_requests: total no. of special request.
 - reservation_status: Whether a customer has checked out or canceled,or not showed
 - reservation_status_date: Date of making reservation status.
+
+
 - Total number of rows in data: 119390
 - Total number of columns: 32
-  
-**Data Cleaning**
-(1) Removing duplicate rows if any
+```
+
+## Data Cleaning
+
+
+### (1) Removing duplicate rows if any
+```
 All duplicate rows were dropped.
-(2) Handling missing values
+```
+### (2) Handling missing values
+```
 - Null values in columns 'company','agent', 'country' and 'children' were replaced by 0.
 - There are some rows with total number of 'adults' , 'children' and 'babies' is equal to zero. So we will remove such rows is equal 0.
-(3) Converting columns to appropriate data types
+```
+
+### (3) Converting columns to appropriate data types
+```
 - Changed data type of `children`, `company`, `agent` float to int type.
 - Changed data type of 'reservation_status_date' to datetime format.
-(5) Adding important columns
+```
+
+### (5) Adding important columns
+```
 - Creating new column `Total_stay_in_nights` by adding `stays_in_weekend_nights`+`stays_in_week_nights`.
 - Creating new column `Total_people` by adding `adults`+`children`+`babies`.
+```
 
-**Exploratory Data Analysis**
+## Exploratory Data Analysis
+
 Performed EDA and tried answering the following questions:
 
+```
  Q1) In which week number most of the people arrived ?
  Q2) Find the relation between Avarage daily Rate (adr) and total stays in nights?
  Q3) lets see which month generate highes revenue ?
@@ -89,19 +105,12 @@ Performed EDA and tried answering the following questions:
  Q17) Which room type has the highest Average Daily Rate (adr) ?
  Q18) In which month the average daily rate of Resort Hotel is highest ?
  Q19) In which month the average daily rate of City Hotel is highest ?
+```
 
-**The following plots had been used:**
+## Analysis:
 
-   - Bar Plot.
-   - Scatter Plot.
-   - Pie Chart.
-   - Line Plot.
-   - Heatmap.
-   - Box Plot
-   - 
-**Analysis:**
 Performed analysis and made following conclusions:
-
+```
 1. A city hotel has more bookings than a resort. Offer packages and promotions to promote bookings for the resort hotel.
 
 2. BB is the most requested food. The hotel should maintain food quality while also offering discounts on other foods to promote other food types, reducing the burden on kitchen management and keeping a variety of food options available to customers.
@@ -115,7 +124,21 @@ Performed analysis and made following conclusions:
 6. Because rooms A and D are the most popular with customers, the hotel should maintain their quality. The hotel should promote rooms E, F, and G to increase demand by offering discounts. Because customers do not prefer to book room types B, C, H, and L, the hotel can eliminate them, lowering the cost of these rooms.
 
 7. People typically book rooms for two people, so encourage family and group bookings. You can maximize revenue by promoting it with a discounted offer for group bookings.
-Conclusion
+```
+
+The following plots had been used:
+```
+   - Bar Plot.
+   - Scatter Plot.
+   - Pie Chart.
+   - Line Plot.
+   - Heatmap.
+   - Box Plot
+   ```
+
+## Conclusion
+
+```
 (1). The majority of guests come from western europe countries.We should spend a significant amount of our budget on those area.
 
 (2). Around 61% bookings are for City hotel and 39% bookings are for Resort hotel, therefore City Hotel is busier than Resort hotel.
@@ -130,7 +153,11 @@ approax 80% distribution_channel is TA/TO
 (6). Most common stay length is less than 4 days and generally people prefer City hotel for short stay, but for long stays, Resort Hotel is preferred.
 
 (7). November,Descember, February And January are the months which has less booking so in this perios you can get rooms with less average daily rate. And Avoid most busiest months for hotels (June,July,August)
-Challenges
+```
+
+
+## Challenges
+```
 (1) Lot of null values were present in the dataset.
 
 (2) Data type of some Data was in wrong format.
@@ -138,4 +165,4 @@ Challenges
 (3) Lot of duplicate data.
 
 (4) Which visualization techniques to use was a challenge?
-
+```
